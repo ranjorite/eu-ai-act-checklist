@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for better aesthetics */
+body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    --sb-track-color: #f1f5f9;
+    --sb-thumb-color: #64748b;
+    --sb-thumb-hover-color: #475569;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--sb-thumb-hover-color);
+}

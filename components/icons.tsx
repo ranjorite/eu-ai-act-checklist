@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const LogoIcon: React.FC = () => (
@@ -8,31 +7,23 @@ export const LogoIcon: React.FC = () => (
     </svg>
 );
 
-// Fix: Add and export AiAssistantIcon component to resolve import error.
+// Fix: Add missing icon components (AiAssistantIcon, CloseIcon, LoadingIcon)
+// to resolve import errors in AiAssistantModal.tsx. These components are
+// necessary for displaying the modal's UI correctly.
 export const AiAssistantIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-      <path
-        d="M12 2.5L13.84 8.66L20 10.5L13.84 12.34L12 18.5L10.16 12.34L4 10.5L10.16 8.66L12 2.5Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <path d="M5 18.5L6 16.5L8 15.5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M16 15.5L18 16.5L19 18.5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.5L13.13 8.87L17.5 5.5L14.13 9.87L21.5 11H14.87L11.5 17.5L8.13 11H2.5L9.87 9.87L5.5 5.5L10.87 8.87L12 2.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
 );
 
-// Fix: Add and export CloseIcon component to resolve import error.
-export const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} stroke="currentColor">
-        <path d="M18 6L6 18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M6 6L18 18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+export const CloseIcon: React.FC<{ className?: string }> = ({ className = "h-6 w-6" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
 );
 
-// Fix: Add and export LoadingIcon component to resolve import error.
 export const LoadingIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={`animate-spin h-8 w-8 text-slate-500 ${className ?? ''}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <svg className={`animate-spin h-8 w-8 ${className || ''}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
     </svg>
