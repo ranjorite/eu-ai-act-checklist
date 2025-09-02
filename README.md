@@ -2,6 +2,12 @@
 
 An interactive web application to help navigate the EU AI Act's questionnaire and documentation requirements.
 
+## 🌐 Live Demo
+
+The application is deployed and accessible online:
+
+**[https://ranjorite.github.io/eu-ai-act-checklist/](https://ranjorite.github.io/eu-ai-act-checklist/)**
+
 ## ✨ Features
 
 -   **Interactive Checklists**: Two separate forms for the "Questionnaire" and "Documentation" requirements based on the EU AI Act.
@@ -29,7 +35,7 @@ Follow these instructions to set up and run the project locally for review or de
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/eu-ai-act-checklist.git
+    git clone https://github.com/ranjorite/eu-ai-act-checklist.git
     cd eu-ai-act-checklist
     ```
 
@@ -47,6 +53,17 @@ Follow these instructions to set up and run the project locally for review or de
 
 4.  **Open in browser:**
     Navigate to the local URL provided in your terminal (e.g., `http://localhost:5173`). The app will be running, and it will automatically reload as you make changes to the code.
+
+## 🚀 Deployment
+
+This project is configured for easy deployment to GitHub Pages.
+
+1.  **Run the deploy script:**
+    ```bash
+    npm run deploy
+    ```
+2.  **Configure GitHub Pages:**
+    In your repository settings under "Pages," set the source to the `gh-pages` branch.
 
 ## 🤝 Contributing
 
