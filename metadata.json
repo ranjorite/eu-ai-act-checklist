@@ -1,0 +1,5 @@
+{
+  "name": "EU AI Act Compliance Checklist",
+  "description": "An interactive web application to help navigate the EU AI Act's questionnaire and documentation requirements.",
+  "requestFramePermissions": []
+}
